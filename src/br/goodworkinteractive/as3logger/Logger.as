@@ -74,16 +74,16 @@ package br.goodworkinteractive.as3logger
 		 * @param colorHightlight	Color for hightlight the text.
 		 * @param userKeys	        switch keys to true or flase.
 		 */
-		static public function config(stage:Stage, w:Number, h:Number, colorNormal:Number = 0xFFFFFF, colorHighlight:Number = 0x00FF00, useKeys:Boolean=true) :void
+		static public function config(stage:Stage) :void
 		{
 			_stage = stage;
 			_ui = new LoggerUI();
-			_ui.textColor = colorNormal;
-			_ui.highlightTextColor = colorHighlight;
 			_stage.addChild(_ui);
-			if (useKeys) _stage.addEventListener(KeyboardEvent.KEY_DOWN, Logger.keyboardEventsHandler, false, 0, true);
-			_configured = true;
+			_stage.addEventListener(KeyboardEvent.KEY_DOWN, Logger.keyboardEventsHandler, false, 0, true);
+			
 			Logs.initialize();
+			
+			_configured = true;
 		}
 		
 		/**
