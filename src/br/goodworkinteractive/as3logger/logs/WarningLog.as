@@ -25,7 +25,6 @@
 package br.goodworkinteractive.as3logger.logs
 {
 	
-	import br.goodworkinteractive.as3logger.logs.AbstractLog;
 	import br.goodworkinteractive.as3logger.logs.ILog;
 	import br.goodworkinteractive.as3logger.logs.Log;
 	
@@ -54,10 +53,12 @@ package br.goodworkinteractive.as3logger.logs
 		 * @param	warning	 String
 		 * @param	writer	 Function
 		 */
-		public function WarningLog(error:Error, writer:Function)
+		public function WarningLog(message:String, writer:Function)
 		{
-			_message = error;
-			writer(OPEN_FONT_TAG+_message+CLOSE_FONT_TAG);
+			_log = new Log("warning", message)
+			writer(OPEN_FONT_TAG);
+			writer("*  "+_log.message);
+			writer(CLOSE_FONT_TAG);
 		}
 	
 	}
