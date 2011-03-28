@@ -2,6 +2,16 @@ This is a simple logger for actionscript 3 with a cute UI we are working at Good
 
 VERSION 0.1 =)
 
+** How to use
+
+Main project file: 
+Logger.config(stage);
+
+Then,
+Logger.log(String); # Normal log
+Logger.log(Error, "error"); # Log an Error
+Logger.log(String, "warning"); # Log an Warning
+
 
 ** Next features
 
