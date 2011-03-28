@@ -68,11 +68,6 @@ package br.goodworkinteractive.as3logger
 		/**
 		 * Set any configuration to Logger starts.
 		 * @param stage	            Stage reference.
-		 * @param w	                Field width.
-		 * @param h	                Field height.
-		 * @param colorNormal    	Color for the text.
-		 * @param colorHightlight	Color for hightlight the text.
-		 * @param userKeys	        switch keys to true or flase.
 		 */
 		static public function config(stage:Stage) :void
 		{
