@@ -2,6 +2,17 @@ This is a simple logger for actionscript 3 with a cute UI we are working at Good
 
 VERSION 0.1 =)
 
+
+** Next features
+
+br.goodworkinteractive.as3logger.Logger#registerObject(obj:Object);
+br.goodworkinteractive.as3logger.Logger#registerDisplayObject(obj:DisplayObject);
+
+br.goodworkinteractive.as3logger.ui.LoggerCommandLine;
+br.goodworkinteractive.as3logger.ui.LoggerPanel;
+br.goodworkinteractive.as3logger.ui.LoggerMenu;
+
+
 This project is under the MIT License.
 
 Copyright (c) 2011 GoodWork! Interactive.
