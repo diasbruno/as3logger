@@ -25,10 +25,18 @@
 package br.goodworkinteractive.as3logger.logs
 {
 	
-	import br.goodworkinteractive.as3logger.logs.AbstractLog;
 	import br.goodworkinteractive.as3logger.logs.ILog;
 	import br.goodworkinteractive.as3logger.logs.Log;
-
+	
+	/**
+	 * Write a normal log like a simple trace.
+	 * 
+	 * @langversion ActionScript 3
+	 * @playerversion Flash 9.0.0
+	 * 
+	 * @author Bruno Dias
+	 * @since  28.03.2011
+	 */
 	public class TraceLog extends AbstractLog implements ILog
 	{
 		
@@ -47,8 +55,8 @@ package br.goodworkinteractive.as3logger.logs
 		 */
 		public function TraceLog(message:String, writer:Function)
 		{
-			_message = message;
-			writer(OPEN_FONT_TAG+_message+CLOSE_FONT_TAG);
+			_log = new Log("", message);
+			writer(OPEN_FONT_TAG+log.message+CLOSE_FONT_TAG);
 		}
 	
 	}
