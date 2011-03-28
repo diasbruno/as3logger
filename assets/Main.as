@@ -34,7 +34,7 @@ package
 			stage.align = "TL";
 			stage.scaleMode = "noScale";
 			
-			Logger.config(stage, stage.stageWidth, stage.stageHeight);
+			Logger.config(stage);
 			Logger.log("Test");
 			
 			var nullArray:Array;
@@ -42,6 +42,7 @@ package
 				nullArray.push("item");
 			} catch(e:Error) {Logger.log(e,"error");}
 			
+			Logger.log("Test", "warning");
 		}
 	
 	}
