@@ -34,14 +34,13 @@ package br.goodworkinteractive.as3logger
 	import flash.events.KeyboardEvent;
 	import flash.ui.Keyboard;
 	
-	
 	/**
 	 * Logger manager.
 	 * 
 	 * @langversion ActionScript 3
 	 * @playerversion Flash 10.0.0
 	 * 
-	 * @author Bruno Dias
+	 * @author Bruno Dias 
 	 * @author Victor Potasso
 	 * @since  21.03.2011
 	 */
@@ -49,8 +48,11 @@ package br.goodworkinteractive.as3logger
 	{
 		
 		//*
-		//* Private Properties
+		//* Statics & Contantes
 		//*
+		
+		/** @private Version. **/
+		static private const VERSION:String = "0.1";
 		
 		/** @private Specify if the Logger was configured. **/
 		static private var _configured:Boolean=false;
@@ -60,7 +62,7 @@ package br.goodworkinteractive.as3logger
 		static private var _ui:LoggerUI;
 		
 		//*
-		//* Public Methods
+		//*  Methods
 		//*
 		
 		/**
@@ -81,6 +83,7 @@ package br.goodworkinteractive.as3logger
 			_stage.addChild(_ui);
 			if (useKeys) _stage.addEventListener(KeyboardEvent.KEY_DOWN, Logger.keyboardEventsHandler, false, 0, true);
 			_configured = true;
+			Logs.initialize();
 		}
 		
 		/**
@@ -99,8 +102,10 @@ package br.goodworkinteractive.as3logger
 				switch (type)
 				{
 					case "error" : ilog = new ErrorLog(message, _ui.write); break;
+					case "warning" : ilog = new WarningLog(message, _ui.write); break;
 					default : ilog = new TraceLog(message, _ui.write); break;
 				}
+				Logs.save(ilog.log);
 			} else trace("Logger error: Before start logging, you must configure. See Logger#config().");
 		}
 		
