@@ -72,7 +72,9 @@ package br.goodworkinteractive.as3logger
 		static public function config(stage:Stage) :void
 		{
 			_stage = stage;
+			
 			_ui = new LoggerUI();
+			
 			_stage.addChild(_ui);
 			_stage.addEventListener(KeyboardEvent.KEY_DOWN, Logger.keyboardEventsHandler, false, 0, true);
 			
