@@ -25,6 +25,7 @@
 package br.goodworkinteractive.as3logger.logs
 {
 	
+	import br.goodworkinteractive.as3logger.logs.AbstractLog;
 	import br.goodworkinteractive.as3logger.logs.ILog;
 	import br.goodworkinteractive.as3logger.logs.Log;
 	
@@ -37,7 +38,7 @@ package br.goodworkinteractive.as3logger.logs
 	 * @author Bruno Dias
 	 * @since  28.03.2011
 	 */
-	public class WarningLog extends Log implements ILog
+	public class WarningLog extends AbstractLog implements ILog
 	{
 		
 		//*
