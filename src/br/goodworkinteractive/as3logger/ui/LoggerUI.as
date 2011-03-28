@@ -43,6 +43,7 @@ package br.goodworkinteractive.as3logger.ui
 	 * @author Bruno Dias
 	 * @since  23.03.2011
 	 */
+	//TODO: implement method to reset all fields.
 	public class LoggerUI extends Sprite
 	{
 		
@@ -172,20 +173,6 @@ package br.goodworkinteractive.as3logger.ui
 			_timestamp.appendText(LoggerUtils.timestamp() + RETURN);
 			_log.htmlText += text + "<br>";
 		}
-		
-		//*
-		//* Getters & Setters
-		//*
-		
-		public function set setColor (c:Number) :void { _log.textColor = c; }
-		
-		public function set textColor(value:Number) :void { _fieldTextColor = value; }
-		
-		public function get textColor ():Number { return _fieldTextColor; }
-		
-		public function set highlightTextColor(value:Number) :void { _fieldTextColorHighlight = value; }
-		
-		public function get highlightTextColor() :Number { return _fieldTextColorHighlight; }
 		
 		//*
 		//* Events
