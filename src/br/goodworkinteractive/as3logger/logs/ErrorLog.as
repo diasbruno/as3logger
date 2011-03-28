@@ -41,7 +41,7 @@ package br.goodworkinteractive.as3logger.logs
 	 * @author Bruno Dias
 	 * @since  26.03.2011
 	 */
-	public class ErrorLog extends Log implements ILog
+	public class ErrorLog extends AbstractLog implements ILog
 	{
 		
 		//*
@@ -67,7 +67,8 @@ package br.goodworkinteractive.as3logger.logs
 				explodeDebugErrorLen:uint, 
 				i:uint=1;
 			
-			_message = "<font color='#FF0000'>"+error+"</font>";
+			_log = new Log("", error.name);
+			//log.message = "<font color='#FF0000'>"+error+"</font>";
 			writer(OPEN_FONT_TAG);
 				
 			if (!LoggerUtils.debugMode()) 
