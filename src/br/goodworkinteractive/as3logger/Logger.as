@@ -35,7 +35,7 @@ package br.goodworkinteractive.as3logger
 	import flash.ui.Keyboard;
 	
 	/**
-	 * Logger manager.
+	 * Logger manager..
 	 * 
 	 * @langversion ActionScript 3
 	 * @playerversion Flash 10.0.0
@@ -102,7 +102,7 @@ package br.goodworkinteractive.as3logger
 					case "warning" : ilog = new WarningLog(message, _ui.write); break;
 					default : ilog = new TraceLog(message, _ui.write); break;
 				}
-				Logs.save(ilog.log);
+				Logs.save(ilog.message);
 			} else trace("Logger error: Before start logging, you must configure. See Logger#config().");
 		}
 		

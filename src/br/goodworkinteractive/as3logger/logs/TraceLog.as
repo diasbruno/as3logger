@@ -56,7 +56,7 @@ package br.goodworkinteractive.as3logger.logs
 		public function TraceLog(message:String, writer:Function)
 		{
 			_log = new Log("", message);
-			writer(OPEN_FONT_TAG+log.message+CLOSE_FONT_TAG);
+			writer(OPEN_FONT_TAG+_log.message+CLOSE_FONT_TAG);
 		}
 	
 	}

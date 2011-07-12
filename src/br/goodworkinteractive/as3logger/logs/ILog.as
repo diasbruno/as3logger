@@ -37,7 +37,7 @@ package br.goodworkinteractive.as3logger.logs
 	public interface ILog
 	{
 		
-		function get message() :String;
+		function get message() :Log;
 		
 	}
 

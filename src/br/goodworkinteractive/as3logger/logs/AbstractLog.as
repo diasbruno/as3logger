@@ -44,7 +44,7 @@ package br.goodworkinteractive.as3logger.logs
 		//*
 		
 		/** @private The way we will store the message. **/
-		static protected var _log:Log = "";
+		static protected var _log:Log = new Log("");
 		
 		
 		//*
