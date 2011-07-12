@@ -2,7 +2,7 @@
  * AS3Logger Main Tester.
  * Tester.fla
  */
-package
+package 
 {
 	
 	import br.goodworkinteractive.as3logger.Logger;
@@ -33,7 +33,7 @@ package
 			
 			stage.align = "TL";
 			stage.scaleMode = "noScale";
-			
+
 			Logger.config(stage);
 			Logger.log("Test");
 			
