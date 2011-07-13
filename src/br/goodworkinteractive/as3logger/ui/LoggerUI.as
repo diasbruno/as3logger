@@ -31,6 +31,7 @@ package br.goodworkinteractive.as3logger.ui
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.text.TextField;
+	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
 
 	/**
@@ -52,14 +53,15 @@ package br.goodworkinteractive.as3logger.ui
 		//*
 		
 		/** @private Padding of text fields. **/
-		static private const PADDING:Number = 10;
-		static private const RETURN:String = "\n";
+		static private const PADDING	    :Number = 10;
+		static private const SCROLL 	    :Number = 50;
+		static private const RETURN         :String = "\n";
 		
-		static private var LINES_STYLE:TextFormat = new TextFormat("Tahoma", 12, 0x444444,null,null,null,null,null, "right");
-		static private var TIMESTAMP_STYLE:TextFormat = new TextFormat("Tahoma", 12, 0xFFFFFF,null,null,null,null,null, "center");
-		static private var FIELD_STYLE:TextFormat = new TextFormat("Tahoma", 12, 0xFFFFFF,null,null,null,null,null, "left");
+		static private var LINES_STYLE		:TextFormat     = new TextFormat("Tahoma", 12, 0x444444,null,null,null,null,null, "right");
+		static private var TIMESTAMP_STYLE  :TextFormat = new TextFormat("Tahoma", 12, 0xFFFFFF,null,null,null,null,null, "center");
+		static private var FIELD_STYLE	    :TextFormat	  = new TextFormat("Tahoma", 12, 0xFFFFFF,null,null,null,null,null, "left");
 		
-		static private var _line:Number = 1;
+		static private var _line            :Number = 1;
 		
 		/**
 		 * @constructor
@@ -67,19 +69,23 @@ package br.goodworkinteractive.as3logger.ui
 		public function LoggerUI() :void
 		{
 			_lineNumber = new TextField();
-			_timestamp = new TextField();
-			_log = new TextField();
+			_timestamp  = new TextField();
+			_log 		= new TextField();
 			
-			_lineNumber.multiline = 
-			_timestamp.multiline = 
-			_log.multiline = true;
+			_lineNumber.multiline = true;
+			_timestamp.multiline  = true;
+			_log.multiline 		  = true;
+			
+			_lineNumber.autoSize 	= TextFieldAutoSize.LEFT;
+			_timestamp.autoSize 	= TextFieldAutoSize.LEFT;
+			_log.autoSize 			= TextFieldAutoSize.LEFT;
 			
 			_lineNumber.width = 30 - PADDING;
-			_timestamp.width = 66;
+			_timestamp.width  = 66;
 			
 			_lineNumber.defaultTextFormat = LINES_STYLE;
-			_timestamp.defaultTextFormat = TIMESTAMP_STYLE;
-			_log.defaultTextFormat = FIELD_STYLE;
+			_timestamp.defaultTextFormat  = TIMESTAMP_STYLE;
+			_log.defaultTextFormat        = FIELD_STYLE;
 			
 			addEventListener(Event.ADDED_TO_STAGE, eventsHandler, false, 0, true);
 		}
@@ -137,9 +143,9 @@ package br.goodworkinteractive.as3logger.ui
 			if(stage)
 			{
 				gr.clear();
-				gr.beginFill(0x1A1A1A, .95);
+				gr.beginFill(0x666666, .9);
 				gr.drawRect(0,0,(stage.stageWidth/4)*3,stage.stageHeight);
-				gr.beginFill(0xD1D1D1, .95);
+				gr.beginFill(0xD1D1D1, .9);
 				gr.drawRect(0,0,40,stage.stageHeight);
 				gr.endFill();
 			}
@@ -151,9 +157,9 @@ package br.goodworkinteractive.as3logger.ui
 		 */
 		private function organizeLayout() :void
 		{
-			_lineNumber.x = _lineNumber.y = _timestamp.y = _log.y = PADDING;
-			_timestamp.x = _lineNumber.x + _lineNumber.width + (PADDING * 2);
-			_log.x = _timestamp.x + _timestamp.width + PADDING;
+			_lineNumber.x = _lineNumber.y = _timestamp.y      = _log.y = PADDING;
+			_timestamp.x  = _lineNumber.x + _lineNumber.width + (PADDING * 3);
+			_log.x 		  = _timestamp.x  + _timestamp.width  + (PADDING * 6);
 			
 			_lineNumber.height = _timestamp.height = _log.height = stage.height - (PADDING * 2);
 			
@@ -164,13 +170,43 @@ package br.goodworkinteractive.as3logger.ui
 		
 		/**
 		 * @public
+		 * Log scrolling ;]
+		 * @param message String
+		 * @param type String ["down" or "up"]
+		 */
+		public function scrolling(side:String) :void
+		{
+			switch(side)
+			{
+				case "down":
+					if(_lineNumber.y < PADDING)
+					{
+						_lineNumber.y += SCROLL;
+						_timestamp.y  += SCROLL;
+						_log.y        += SCROLL;
+					}
+					break
+				
+				case "up":
+					if(_lineNumber.height > stage.stageHeight - PADDING && _lineNumber.y > -(_lineNumber.height - stage.stageHeight))
+					{
+						_lineNumber.y -= SCROLL;
+						_timestamp.y  -= SCROLL;
+						_log.y        -= SCROLL;	
+					}
+					break
+			}
+		}
+		
+		/**
+		 * @public
 		 * Write a log on the TextField.
 		 * @param text String
 		 */
 		public function write(text:String) :void
 		{
-			_lineNumber.appendText((_line++).toString() + RETURN);
-			_timestamp.appendText(LoggerUtils.timestamp() + RETURN);
+			_lineNumber.appendText((_line++).toString()    + RETURN);
+			_timestamp .appendText(LoggerUtils.timestamp() + RETURN);
 			_log.htmlText += text + "<br>";
 		}
 		
@@ -197,6 +233,5 @@ package br.goodworkinteractive.as3logger.ui
 				break;
 			}
 		}
-		
 	}
 }

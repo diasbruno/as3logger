@@ -35,7 +35,8 @@ package
 			stage.scaleMode = "noScale";
 
 			Logger.config(stage);
-			Logger.log("Test");
+			
+			for(var i:int=0; i <100; i++) Logger.log("Test");
 			
 			var nullArray:Array;
 			try{
