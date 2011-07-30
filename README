@@ -22,7 +22,7 @@ Logger.log(String); # Normal log
 Logger.log(Error, "error"); # Log an Error
 Logger.log(String, "warning"); # Log an Warning
 
-<h1>License</h1>
+[h1]License[/h1]
 
 This project is under the MIT License.
 
