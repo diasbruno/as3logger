@@ -25,12 +25,12 @@ Logger.log(String, "warning"); # Log an Warning
 
 ** Next features
 
-br.goodworkinteractive.as3logger.Logger#registerObject(obj:Object);
-br.goodworkinteractive.as3logger.Logger#registerDisplayObject(obj:DisplayObject);
+as3logger.Logger#registerObject(obj:Object);
+as3logger.Logger#registerDisplayObject(obj:DisplayObject);
 
-br.goodworkinteractive.as3logger.ui.LoggerCommandLine;
-br.goodworkinteractive.as3logger.ui.LoggerPanel;
-br.goodworkinteractive.as3logger.ui.LoggerMenu;
+as3logger.ui.LoggerCommandLine;
+as3logger.ui.LoggerPanel;
+as3logger.ui.LoggerMenu;
 
 
 This project is under the MIT License.
