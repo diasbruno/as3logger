@@ -1,6 +1,16 @@
-This is a simple logger for actionscript 3 with a cute UI we are working at GoodWork! Interactive.
+
+[Update]
+
+as3logger will change the way it works...
+
+We are working on a new feature called Margarita. It's a mac app with a clean UI for debug actionscript/mxml/fla based applications.
+
+as3logger will communicate with Margarita and will have all specifications about it, so you can create your own logger to connect with it.
 
 VERSION 0.1 =)
+
+Just sent us an e-mail, if you like this solution and/or want to contribute.
+<hello@wemakegoodworks.com> =)
 
 ** How to use
 
@@ -44,7 +54,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-Just sent us an e-mail, if you like this solution and/or want to contribute.
-<hello@wemakegoodworks.com> =)
