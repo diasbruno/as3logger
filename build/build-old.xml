@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="GW" default="CompileMain" basedir=".">
+	
+	<description>
+		Ant configurations to compile this project.
+	</description>
+	
+	<!-- load shell environment -->
+    <property environment="ENV" />
+
+    <!-- load property files -->
+    <property file="build.properties"/>
+	<property file="project.properties"/>
+	
+	<taskdef resource="flexTasks.tasks" classpath="${flex.sdk.ant}/lib/flexTasks.jar" />
+	
+	<!--
+		Compile a SWC as directory.
+	-->
+	<target name="SWC-Dir">
+		<echo>Compiling a SWC as diretory...</echo>
+		<exec executable="${flex.sdk.swc}">
+			<arg line=" ${Publisher}
+						-compute-digest=true
+						-benchmark=true -debug=true -as3=true 
+						-directory=true
+						-source-path '${Flixel}'
+						-include-classes org.flixel.FlxGame
+						-output '${project.libs}/flixel'
+						" />
+						
+		</exec>
+	</target>
+	
+	<!--
+		Compile a SWC.
+	-->
+	<target name="SWC">
+		<echo>Compiling a SWC ...</echo>
+		<exec executable="${flex.sdk.swc}">
+			<arg line=" ${Publisher}
+						-compute-digest=true 
+						-debug=false
+						-directory=false
+						-source-path '${Flixel}'
+						-include-classes org.flixel.FlxGame
+						-output '${project.libs}/flixel-git.swc'
+						" />
+						
+		</exec>
+	</target>
+	
+	<!--
+		Compile a SWC as RSL.
+	-->
+	<target name="RSL">
+		<echo>Compiling a SWC RSL ...</echo>
+		<exec executable="${flex.sdk.compiler}">
+			<arg line=" ${Publisher}
+						-compute-digest=true 
+						-debug=false
+						-directory=false
+						-source-path '${Flixel}'
+						-include-classes org.flixel.FlxGame
+						-output '${project.libs}/flixel.swc'
+						" />
+						
+		</exec>
+	</target>
+	
+	<!--
+		Compile the main of the application.
+	-->
+	<target name="CompileMain">
+		<echo>Start compiling Main.</echo>
+		<exec executable="${flex.sdk.compiler}">
+			<arg line=" ${Publisher} 
+						-benchmark=true -compiler.debug=true -compiler.as3=true 
+						'${project.src}/goodworkinteractive/Application.as'
+						-library-path '${flex.sdk.libs}'
+						-source-path '${project.src}' '${GWFramework}' 
+						-output '${project.debug}/studiofbapp.swf'"/>
+		</exec>
+	</target>
+	
+	<!--
+		Buld asDocs.
+	-->
+	<target name="BuildDocs">
+		<exec executable="${flex.sdk.asdocs}" failonerror="true">
+		</exec>
+	</target>
+	
+	<!--
+		Launch
+	-->
+	<target name="Launch">
+		<exec executable="/Applications/Adobe Flash CS5/Players/Flash Player.app"/>
+	</target>
+	
+	<!--
+		Help
+	-->
+	<target name="Help">
+		<echo>Open relp (Scooby Doo).</echo>
+		<exec executable="${flex.sdk.compiler}">
+			<arg line="-help library-path"/>
+		</exec>
+	</target>
+	
+</project>

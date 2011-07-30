@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="GW" default="CompileDebug" basedir=".">
+	
+	<description>
+		Ant configurations to compile as3 projects.
+	</description> 
+	
+	<!-- load shell environment -->
+    <property environment="ENV" />
+	
+    <!-- load property files -->
+	<property file="flexsdk.properties"/>
+    <property file="build.properties"/>
+	<property file="project.properties"/>
+	
+	<!--
+		Before you start the project, you must have to configure some properties.
+		see build.properties
+		see project.properties
+	-->
+	<target name="CompileDebug">
+        <exec executable="${flex.sdk.compiler}">
+			<arg line="'${project.main}' 
+						${Publisher} ${project.settings} ${project.debug.options}
+						-library-path '${flex.sdk.libs}' '${project.libs.path}' '${Greensock}'
+						-source-path '${project.src.path}/' '${TemplateAS}' '${AS3Utils}' 
+						${project.debug}" />
+		</exec>
+    </target>
+	
+	<!--
+		Before you start the project, you must have to configure some properties.
+		see build.properties
+		see project.properties
+	-->
+	<target name="CompileRelease">
+        <exec executable="${flex.sdk.compiler}">
+			<arg line="'${project.main}' 
+						${Publisher} ${project.settings} ${project.release.options}
+						-library-path '${flex.sdk.libs}' '${project.libs.path}' '${Greensock}'
+						-source-path '${project.src.path}/' '${TemplateAS}' 
+						${project.release}" />
+		</exec>
+    </target>
+	
+</project>
