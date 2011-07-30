@@ -22,16 +22,7 @@ Logger.log(String); # Normal log
 Logger.log(Error, "error"); # Log an Error
 Logger.log(String, "warning"); # Log an Warning
 
-
-** Next features
-
-as3logger.Logger#registerObject(obj:Object);
-as3logger.Logger#registerDisplayObject(obj:DisplayObject);
-
-as3logger.ui.LoggerCommandLine;
-as3logger.ui.LoggerPanel;
-as3logger.ui.LoggerMenu;
-
+<h1>License</h1>
 
 This project is under the MIT License.
 
