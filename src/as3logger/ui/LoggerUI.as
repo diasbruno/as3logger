@@ -14,7 +14,7 @@ package as3logger.ui
  * TODO: implement the connection with Margarita.
  */
 
-import br.goodworkinteractive.as3logger.utils.LoggerUtils;
+import as3logger.utils.LoggerUtils;
 
 import flash.display.Graphics;
 import flash.display.Sprite;

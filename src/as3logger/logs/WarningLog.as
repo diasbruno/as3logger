@@ -1,4 +1,4 @@
-package as3logger
+package as3logger.logs
 {
 
 /**
@@ -14,8 +14,8 @@ package as3logger
  * TODO: implement the connection with Margarita.
  */
 
-import br.goodworkinteractive.as3logger.logs.ILog;
-import br.goodworkinteractive.as3logger.logs.Log;
+import as3logger.logs.ILog;
+import as3logger.logs.Log;
 
 /**
  * Log a warning message.

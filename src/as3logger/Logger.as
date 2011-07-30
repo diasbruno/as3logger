@@ -14,9 +14,9 @@ package as3logger
  * TODO: implement the connection with Margarita.
  */
 
-import br.goodworkinteractive.as3logger.logs.*;
-import br.goodworkinteractive.as3logger.ui.LoggerUI;
-import br.goodworkinteractive.as3logger.utils.LoggerUtils;
+import as3logger.logs.*;
+import as3logger.ui.LoggerUI;
+import as3logger.utils.LoggerUtils;
 
 import flash.display.Sprite;
 import flash.display.Stage;
@@ -36,6 +36,13 @@ import flash.ui.Keyboard;
 public class Logger
 {
 	
+	/**
+	 * Logger types
+	 */
+	static public const LOG:uint = 0;
+	static public const WARNING:uint = 1;
+	static public const ERROR:uint = 2;
+
 	//*
 	//* Statics & Contantes
 	//*
@@ -47,7 +54,7 @@ public class Logger
 	static private var _configured:Boolean=false;
 	
 	/** @private References. **/
-	static private var _stage:Stage = null;
+	static private var _stage:Sprite = null;
 	static private var _ui:LoggerUI;
 	
 	//*
@@ -60,7 +67,7 @@ public class Logger
 	 * Set any configuration to Logger starts.
 	 * @param stage	            Stage reference.
 	 */
-	static public function config(stage:Stage) :void
+	static public function config(stage:Sprite) :void
 	{
 		_stage = stage;
 		
@@ -79,21 +86,22 @@ public class Logger
 
 	/**
 	 * Log what you want! =)
-	 * @param message String
-	 * @param type String
+	 *
+	 * @param message Message
+	 * @param type Type of your log message. (Logger.LOG | Logger.WARNING | Logger.ERROR)
 	 * 
 	 * Note: The rest was removed to avoid multiple messages, so each message can has a type 
 	 * and it give us possibility to store them.
 	 */
-	static public function log(message:*, type:String = "") :void
+	static public function log(message:*, type:uint = 0) :void
 	{
 		var ilog:ILog;
 		if (_configured) 
 		{
 			switch (type)
 			{
-				case "error" : ilog = new ErrorLog(message, _ui.write); break;
-				case "warning" : ilog = new WarningLog(message, _ui.write); break;
+				case ERROR : ilog = new ErrorLog(message, _ui.write); break;
+				case WARNING : ilog = new WarningLog(message, _ui.write); break;
 				default : ilog = new TraceLog(message, _ui.write); break;
 			}
 			Logs.save(ilog.message);
@@ -111,6 +119,7 @@ public class Logger
 	 */
 	static private function keyboardEventsHandler(event:KeyboardEvent) :void
 	{
+		trace(event.keyCode);
 		switch (event.keyCode)
 		{
 			case 83:_ui.visible = true; 	 break;

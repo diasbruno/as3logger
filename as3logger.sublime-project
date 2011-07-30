@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"SWF"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
 				"cfoutput",
 				"cfoutput: cfoutput"
 			],
@@ -47,15 +55,39 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Developer/AS3/as3logger/build/build.xml",
+			"settings":
+			{
+				"buffer_size": 1884,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Developer/AS3/as3logger/build/project.properties",
+			"settings":
+			{
+				"buffer_size": 1771,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Developer/AS3/as3logger/tests/test_as3logger.as",
+			"settings":
+			{
+				"buffer_size": 220,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0,
+		"height": 392,
 		"selected_items":
 		[
 		],
-		"width": 0
+		"width": 392
 	},
 	"console":
 	{
@@ -71,7 +103,23 @@
 	},
 	"file_history":
 	[
+		"/Users/brunodias/Library/Application Support/Sublime Text 2/Packages/ActionScript/public_function",
+		"/Developer/AS3/as3logger/tests/test_as3Logger.as",
+		"/Developer/AS3/as3logger/build/build.xml",
+		"/Developer/AS3/as3logger/build/build-old.xml",
 		"/Developer/AS3/as3logger/README",
+		"/Developer/AS3/as3logger/src/as3logger/Logger.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/WarningLog.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/AbstractLog.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/ErrorLog.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/ILog.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/Logs.as",
+		"/Developer/AS3/as3logger/src/as3logger/logs/TraceLog.as",
+		"/Developer/AS3/as3logger/src/as3logger/utils/LoggerUtils.as",
+		"/Developer/AS3/as3logger/src/as3logger/ui/LoggerUI.as",
+		"/Developer/AS3/as3logger/src/as3logger/ui/LoggerPanel.as",
+		"/Developer/AS3/as3logger/src/as3logger/ui/LoggerMenu.as",
+		"/Developer/AS3/as3logger/src/as3logger/ui/LoggerCommandLine.as",
 		"/Developer/AS3/as3logger/src/Main.as",
 		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/index.cfm",
 		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/css/h5b.css",
@@ -153,18 +201,95 @@
 	{
 		"mount_points":
 		[
-			"/Developer/AS3/as3logger/assets",
-			"/Developer/AS3/as3logger/bin",
-			"/Developer/AS3/as3logger/fla",
-			"/Developer/AS3/as3logger/html-template",
-			"/Developer/AS3/as3logger/src"
+			"/Developer/AS3/as3logger"
 		]
 	},
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Developer/AS3/as3logger/build/build.xml",
+					"settings":
+					{
+						"buffer_size": 1884,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Developer/AS3/as3logger/build/project.properties",
+					"settings":
+					{
+						"buffer_size": 1771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								480,
+								480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/JavaProperties.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Developer/AS3/as3logger/tests/test_as3logger.as",
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ActionScript/ActionScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -214,11 +339,15 @@
 	},
 	"select_project":
 	{
-		"height": 0,
+		"height": 500,
 		"selected_items":
 		[
+			[
+				"",
+				"/Developer/AS3/as3logger/as3logger.sublime-project"
+			]
 		],
-		"width": 0
+		"width": 380
 	},
 	"show_minimap": true,
 	"show_tabs": true,

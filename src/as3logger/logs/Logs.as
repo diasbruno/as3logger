@@ -24,7 +24,7 @@ package as3logger.logs
  * @since  28.03.2011
  */
 //TODO: implement methods to request logs by type and a specific by class.
-public class Logs extends Object
+public class Logs
 {
 	
 	//*

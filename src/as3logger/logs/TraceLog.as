@@ -14,8 +14,8 @@ package as3logger.logs
  * TODO: implement the connection with Margarita.
  */
 
-import br.goodworkinteractive.as3logger.logs.ILog;
-import br.goodworkinteractive.as3logger.logs.Log;
+import as3logger.logs.ILog;
+import as3logger.logs.Log;
 
 /**
  * Write a normal log like a simple trace.
