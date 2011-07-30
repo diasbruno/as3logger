@@ -1,5 +1,5 @@
 
-[Update]
+# Update
 
 as3logger will change the way it works...
 
@@ -12,7 +12,7 @@ VERSION 0.1 =)
 Just sent us an e-mail, if you like this solution and/or want to contribute.
 <hello@wemakegoodworks.com> =)
 
-** How to use
+# How to use
 
 Main project file: 
 Logger.config(stage);
@@ -22,7 +22,7 @@ Logger.log(String); # Normal log
 Logger.log(Error, "error"); # Log an Error
 Logger.log(String, "warning"); # Log an Warning
 
-[h1]License[/h1]
+# License
 
 This project is under the MIT License.
 
