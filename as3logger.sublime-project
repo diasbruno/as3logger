@@ -1,0 +1,228 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cfoutput",
+				"cfoutput: cfoutput"
+			],
+			[
+				"cfparam",
+				"cfparam: cfparam - name and default"
+			],
+			[
+				"A",
+				"Application"
+			],
+			[
+				"po",
+				"position: position: type"
+			],
+			[
+				"te",
+				"text: text-align: left/center/right"
+			],
+			[
+				"cfou",
+				"cfoutput: cfoutput"
+			],
+			[
+				"back",
+				"background: background-color: rgb"
+			],
+			[
+				"cat",
+				"cat_"
+			],
+			[
+				"appl",
+				"Application"
+			],
+			[
+				"cfscript",
+				"cfscript: cfscript - simple"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"console":
+	{
+		"height": 0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Developer/AS3/as3logger/README",
+		"/Developer/AS3/as3logger/src/Main.as",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/index.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/css/h5b.css",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/pages/home.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/Application.cfc",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/App_Code/CatURLRewrite.cs",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/web.config",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/index.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/css/debug.css",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/plugins.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/script.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/libs/swfobject.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/libs/respond.min.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/libs/respond.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/libs/modernizr-2.0.min.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/css/404.css",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/r.sources/js/libs/jquery-1.6.2.js",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/head.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw/404.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/utils/html/createImage.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/Request2",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/Request.cfc",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/style.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/script.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/page.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/image.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/head.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/favico.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/html.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/body.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/Cat.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/App_Code/CatURLRewriter.cs",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/r.sources/css/h5b.css",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/r.sources/css/404.css",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/pages/home.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/pages/home",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/head.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/index.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/themes/gw_i/404.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/script",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/cat/taglibs/favicon.cfm",
+		"/Applications/ColdFusion8/wwwroot/wemakegoodworks/trunk/humans.txt",
+		"/untitled.diff"
+	],
+	"find":
+	{
+		"height": 0
+	},
+	"find_in_files":
+	{
+		"height": 0,
+		"include_history":
+		[
+		],
+		"location_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	{
+		"mount_points":
+		[
+			"/Developer/AS3/as3logger/assets",
+			"/Developer/AS3/as3logger/bin",
+			"/Developer/AS3/as3logger/fla",
+			"/Developer/AS3/as3logger/html-template",
+			"/Developer/AS3/as3logger/src"
+		]
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0
+	},
+	"input":
+	{
+		"height": 27
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"show_minimap": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244,
+	"status_bar_visible": true
+}
