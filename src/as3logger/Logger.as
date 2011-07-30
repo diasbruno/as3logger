@@ -69,13 +69,14 @@ public class Logger
 	 */
 	static public function config(stage:Sprite) :void
 	{
+		trace("Logger::config()");
 		_stage = stage;
 		
 		_ui = new LoggerUI();
 		
 		_stage.addChild(_ui);
 		_ui.visible = false; // init false;
-		_stage.addEventListener(KeyboardEvent.KEY_DOWN, Logger.keyboardEventsHandler, false, 0, true);
+		_stage.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyboardEventsHandler, false, 0, true);
 		
 		Logs.initialize();
 		
@@ -95,6 +96,7 @@ public class Logger
 	 */
 	static public function log(message:*, type:uint = 0) :void
 	{
+		trace("Logger::log()");
 		var ilog:ILog;
 		if (_configured) 
 		{
@@ -119,14 +121,14 @@ public class Logger
 	 */
 	static private function keyboardEventsHandler(event:KeyboardEvent) :void
 	{
-		trace(event.keyCode);
 		switch (event.keyCode)
 		{
-			case 83:_ui.visible = true; 	 break;
-			case 72:_ui.visible = false; 	 break;
-			case 38:_ui.scrolling("up");     break;
-			case 40:_ui.scrolling("down");   break;
+			case 83: _ui.visible = true; 	  break;
+			case 72: _ui.visible = false; 	  break;
+			case 38: _ui.scrolling("up");     break;
+			case 40: _ui.scrolling("down");   break;
 		}
-	}	
+	}
+
 }// class
 }// package
