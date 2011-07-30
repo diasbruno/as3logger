@@ -1,12 +1,15 @@
-/**
- * Just sent us an e-mail, if you like this solution and/or want to contribute.
- * <hello@wemakegoodworks.com> =)
- */
 package as3logger
 {
 
 /**
+ * @langversion ActionScript 3
+ * @playerversion Flash 10.0.0
+ * 
+ * @author Bruno Dias 
+ * @author Victor Potasso
+ *
  * USAGE:
+ *
  * TODO: complete usage.
  * TODO: implement the connection with Margarita.
  */
