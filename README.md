@@ -18,9 +18,9 @@ Main project file:
 Logger.config(stage);
 
 Then,
-Logger.log(String); # Normal log
-Logger.log(Error, "error"); # Log an Error
-Logger.log(String, "warning"); # Log an Warning
+Logger.log(String); // Normal log
+Logger.log(Error, "error"); // Log an Error
+Logger.log(String, "warning"); // Log an Warning
 
 # License
 
