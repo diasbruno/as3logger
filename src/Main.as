@@ -5,7 +5,7 @@
 package 
 {
 	
-	import br.goodworkinteractive.as3logger.Logger;
+	import as3logger.Logger;
 	
 	import flash.display.Sprite;
 	import flash.net.URLLoader;
