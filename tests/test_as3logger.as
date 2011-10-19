@@ -19,7 +19,7 @@ import as3logger.Logger;
 import flash.display.Sprite;
 
 /**
- * test unit.
+ * test unit Logger.
  * 
  * @langversion ActionScript 3
  * @playerversion Flash 10.0.0
@@ -37,7 +37,6 @@ public class test_as3logger extends Sprite
 	public function test_as3logger()
 	{
 		super();
-		trace("test_as3logger::test_as3logger()");
 		initialize();
 	}
 
