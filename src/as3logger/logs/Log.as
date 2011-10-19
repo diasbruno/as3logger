@@ -11,7 +11,11 @@ package as3logger.logs
  * @author Bruno Dias
  * @since  28.03.2011
  */
+<<<<<<< HEAD
 public class Log
+=======
+package as3logger.logs
+>>>>>>> origin/master
 {
 	
 	/**
