@@ -14,6 +14,12 @@ package as3logger
  * TODO: implement the connection with Margarita.
  */
 
+<<<<<<< HEAD
+=======
+import as3logger.logs.Logs;
+import as3logger.utils.LoggerUtils;
+
+>>>>>>> origin/master
 import as3logger.logs.*;
 import as3logger.ui.LoggerUI;
 import as3logger.utils.LoggerUtils;
